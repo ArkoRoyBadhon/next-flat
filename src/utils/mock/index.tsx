@@ -66,4 +66,20 @@ export const flatData = [
     bedRoom: "2",
     price: "124600",
   },
+  {
+    img: "/images/image 1.png",
+    title: "Flat - 123 m²",
+    location: "Dublin 01 - IFSC",
+    room: "5",
+    bedRoom: "2",
+    price: "124600",
+  },
+  {
+    img: "/images/image 1.png",
+    title: "Flat - 123 m²",
+    location: "Dublin 01 - IFSC",
+    room: "5",
+    bedRoom: "2",
+    price: "124600",
+  },
 ];

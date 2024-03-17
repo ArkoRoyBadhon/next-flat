@@ -12,12 +12,12 @@ const Navbar = () => {
           <div className="">
             <Image src="/images/Logo.png" alt="" height={76} width={154.56} />
           </div>
-          <div className="flex gap-[19.34px] items-center">
+          <div className="flex gap-[19.34px] items-center ">
             <SearchIcon />
             <input
               type="text"
               placeholder="Type to search a localisation......"
-              className="w-[214.724px] h-[18px] flex-shrink-0"
+              className="w-[214.724px] h-[18px] flex-shrink-0 focus:outline-none"
             />
           </div>
         </div>
@@ -28,17 +28,17 @@ const Navbar = () => {
           <div className="">
             <UkFlag />
           </div>
-          <div className="bg-[#3C50E0] w-[168.269px] custom-center text-white rounded-[30px] flex gap-[8.33px] py-[5px]">
+          <button className="bg-[#3C50E0] w-[168.269px] custom-center text-white rounded-[30px] flex gap-[8.33px] py-[5px]">
             <HomeIcon />
             <p className="text-[16px] font-semibold leading-[150%]">
               Create an Ad
             </p>
-          </div>
-          <div className="bg-[#3C50E0] w-[168.269px] custom-center text-white rounded-[30px] flex gap-[8.33px] py-[5px]">
+          </button>
+          <button className="bg-[#3C50E0] w-[168.269px] custom-center text-white rounded-[30px] flex gap-[8.33px] py-[5px]">
             <p className="text-[16px] font-semibold leading-[150%]">
               Log in / Sign up
             </p>
-          </div>
+          </button>
           <div className="bg-[#3C50E0]"></div>
         </div>
       </div>
