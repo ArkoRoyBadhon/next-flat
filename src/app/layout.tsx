@@ -21,7 +21,7 @@ export default function RootLayout({
       <body className={inter.className}>
         {/* @ts-ignore */}
         <MyContextProvider>
-          <Navbar />
+          {/* <Navbar /> */}
           {children}
         </MyContextProvider>
       </body>

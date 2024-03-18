@@ -10,34 +10,66 @@ export const sidebarMenu = [
   {
     title: "Property Type",
     icon: <PropertyIcon />,
+    submenu: [
+      {
+        title: "test"
+      }
+    ]
   },
   {
     title: "Surface",
     icon: <AnalyticsIcon />,
+    submenu: [
+      {
+        title: "test"
+      }
+    ]
   },
   {
     title: "Room/Bedroom",
     icon: <Roomicon />,
+    submenu: [
+      {
+        title: "test"
+      }
+    ]
   },
   {
     title: "Products",
     icon: <ProductIcon />,
+    submenu: []
   },
   {
     title: "Analytics",
     icon: <AnalyticsIcon />,
+    submenu: [
+      {
+        title: "test"
+      }
+    ]
   },
   {
     title: "Schedules",
     icon: <ScheduleIcon />,
+    submenu: [
+      {
+        title: "test"
+      }
+    ]
   },
   {
     title: "history",
     icon: <HistoryIcon />,
+    submenu: [
+      {
+        title: "test"
+      }
+    ]
   },
   {
     title: "Sales",
     icon: <SalesIcon />,
+    submenu: []
   },
 ];
 

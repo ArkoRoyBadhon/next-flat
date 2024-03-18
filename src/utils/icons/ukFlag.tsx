@@ -7,7 +7,7 @@ const UkFlag = () => {
       viewBox="0 0 31 33"
       fill="none"
     >
-      <g clip-path="url(#clip0_103_32411)">
+      <g clipPath="url(#clip0_103_32411)">
         <rect
           x="0.524902"
           width="29.8948"
@@ -16,14 +16,14 @@ const UkFlag = () => {
           fill="white"
         />
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           d="M-5.4541 0H8.4968V32.3H-5.4541V0Z"
           fill="#249F58"
         />
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           d="M22.4478 0H36.3987V32.3H22.4478V0Z"
           fill="#FF6C2D"
         />

@@ -18,7 +18,7 @@ export const useMyContext = () => {
 };
 
 export const MyContextProvider: React.FC<AppProps> = ({ children }: any) => {
-  const [menuOpen, setMenuClose] = useState<boolean>(false);
+  const [menuOpen, setMenuClose] = useState<boolean>(true);
 
   const contextValue: ContextData = {
     menuOpen,
