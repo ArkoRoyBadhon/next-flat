@@ -1,11 +1,29 @@
+"use client";
 import HomeIcon from "@/utils/icons/homeIcon";
 import SearchIcon from "@/utils/icons/searchIcon";
 import UkFlag from "@/utils/icons/ukFlag";
 import Image from "next/image";
 import ToogleOption from "./toogleOption";
 import MobileMenuIcon from "@/utils/icons/mobileMenuIcon";
+import BellIcon from "@/utils/detailPageIcon/bellIcon";
+import MessageIcon from "@/utils/detailPageIcon/messageIcon";
+import RedEclipse from "@/utils/detailPageIcon/redEclipse";
+import ArrowdownIcon from "@/utils/icons/arrowdownIcon";
+import ArrowRight from "@/utils/icons/arrowRight";
+import { useState } from "react";
 
 const Navbar = () => {
+  const [logInfo, setLogInfo] = useState(false);
+  let user;
+
+  if (logInfo) {
+    user = { email: "test@gmail.com" };
+  } else {
+    user = null;
+  }
+
+  // const user = null
+
   return (
     <header>
       <div className="w-screen flex justify-between items-center">
@@ -53,11 +71,42 @@ const Navbar = () => {
               Create an Ad
             </p>
           </button>
-          <button className="bg-[#3C50E0] w-[168.269px] custom-center text-white rounded-[30px] flex gap-[8.33px] py-[5px]">
-            <p className="text-[16px] font-semibold leading-[150%]">
-              Log in / Sign up
-            </p>
-          </button>
+          {user?.email ? (
+            <div className="flex gap-[12px] items-center">
+              <div className="w-[33.373px] h-[27.821px] rounded-full custom-center bg-[#E2E8F0]">
+                <BellIcon />
+              </div>
+              <div className="w-[33.373px] h-[27.821px] rounded-full custom-center bg-[#E2E8F0] relative">
+                <MessageIcon />
+                <div className="absolute top-0 right-0">
+                  <RedEclipse />
+                </div>
+              </div>
+              <div
+                onClick={() => setLogInfo(false)}
+                className="flex hap-[10px]"
+              >
+                <Image
+                  src="/images/Ellipse 2824.png"
+                  alt=""
+                  width={42.795}
+                  height={36.549}
+                />
+                <div className="transform rotate-90">
+                  <ArrowRight />
+                </div>
+              </div>
+            </div>
+          ) : (
+            <button
+              onClick={() => setLogInfo(true)}
+              className="bg-[#3C50E0] w-[168.269px] custom-center text-white rounded-[30px] flex gap-[8.33px] py-[5px]"
+            >
+              <p className="text-[16px] font-semibold leading-[150%]">
+                Log in / Sign up
+              </p>
+            </button>
+          )}
           <div className="bg-[#3C50E0]"></div>
         </div>
       </div>

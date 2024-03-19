@@ -48,7 +48,7 @@ const MainBody = () => {
   };
 
   return (
-    <div className=" flex w-screen flex-col lg:flex-row h overflow-hidden gap-[16px] lg:pr-[23.44px] pt-[10px] lg:pt-[0px]">
+    <div className=" flex w-screen flex-col lg:flex-row overflow-hidden gap-[16px] lg:pr-[23.44px] pt-[10px] lg:pt-[0px]">
       <div
         className={`md:w-[97%] lg:flex-1 h-[400px] lg:h-full  overflow-hidden flex-shrink-0 custom-transition `}
       >
@@ -144,8 +144,6 @@ const MainBody = () => {
                       src={imgList[currentImageIndices[index]]}
                       alt="Slider Image "
                       height={572}
-                      // height={472}
-                      // width={780}
                       width={780}
                     />
                   </div>
@@ -207,12 +205,12 @@ const MainBody = () => {
                       <span className="w-[44px]">Link 1</span>
                     </Link>
 
-                    <button className="w-[93px] h-[40px] bg-white rounded-lg text-[14px] font-normal custom-center gap-[10px]">
+                    <Link href="ad-detail" className="w-[93px] h-[40px] bg-white rounded-lg text-[14px] font-normal custom-center gap-[10px]">
                       apply
                       <div className="transfrom -rotate-90">
                         <ArrowdownIcon />
                       </div>
-                    </button>
+                    </Link>
                   </div>
                 </div>
               </div>

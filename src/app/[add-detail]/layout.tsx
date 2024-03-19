@@ -7,10 +7,7 @@ const MainLayout = ({ children }: { children: React.ReactNode }) => {
     <main>
       <div className="h-screen w-screen mx-auto flex flex-col">
         <Navbar />
-        <div className="flex gap-1 w-full h-full relative pl-[64px] md:pl-0">
-          <Sidebar />
-          {children}
-        </div>
+        {children}
       </div>
     </main>
   );
