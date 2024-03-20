@@ -1,15 +1,14 @@
 "use client";
-import ArrowdownIcon from "@/utils/icons/arrowdownIcon";
 import Image from "next/image";
 import { useState } from "react";
 
 interface SliderProps {
   slides: string[];
+  heightProp?: number;
 }
 
-const Slider: React.FC<SliderProps> = ({ slides }) => {
+const Slider: React.FC<SliderProps> = ({ slides, heightProp = 297 }) => {
   const [currentIndex, setCurrentIndex] = useState<number>(0);
-
   const goToSlide = (index: number) => {
     setCurrentIndex(index);
   };
@@ -27,7 +26,7 @@ const Slider: React.FC<SliderProps> = ({ slides }) => {
   };
 
   return (
-    <div className="relative overflow-hidden w-full mx-auto">
+    <div className="relative h-full overflow-hidden w-full mx-auto">
       <button
         className="absolute top-1/2 left-0 transform -translate-y-1/2 p-2 rounded-full shadow-md z-10"
         onClick={() => goToPrevSlide()}
@@ -51,24 +50,24 @@ const Slider: React.FC<SliderProps> = ({ slides }) => {
         />
       </button>
       <div
-        className="flex transition-transform duration-300 ease-in-out"
+        className="flex transition-transform duration-300 ease-in-out h-full"
         style={{ transform: `translateX(-${currentIndex * 100}%)` }}
       >
         {slides.map((slide, index) => (
-          <div key={index} className="w-full h-[297px] flex-shrink-0">
+          <div key={index} className={`w-full h-full flex-shrink-0`}>
             <Image
               src={slide}
               alt={`Slide ${index}`}
               width={617}
-              height={297}
-              className="w-full"
+              height={heightProp}
+              className="w-full h-full"
             />
           </div>
         ))}
       </div>
       <div className="flex justify-center">
         <div className="absolute bottom-[10px] flex justify-center mt-4 space-x-2 z-10">
-          {slides.map((_, index) => ( 
+          {slides.map((_, index) => (
             <button
               key={index}
               className={`w-4 h-4 rounded-full ${

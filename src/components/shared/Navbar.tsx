@@ -8,12 +8,14 @@ import MobileMenuIcon from "@/utils/icons/mobileMenuIcon";
 import BellIcon from "@/utils/detailPageIcon/bellIcon";
 import MessageIcon from "@/utils/detailPageIcon/messageIcon";
 import RedEclipse from "@/utils/detailPageIcon/redEclipse";
-import ArrowdownIcon from "@/utils/icons/arrowdownIcon";
 import ArrowRight from "@/utils/icons/arrowRight";
 import { useState } from "react";
+import CloseIcon from "@/utils/icons/closeIcon";
+import Link from "next/link";
 
 const Navbar = () => {
   const [logInfo, setLogInfo] = useState(false);
+  const [searchBtn, setSearchBtn] = useState(false);
   let user;
 
   if (logInfo) {
@@ -28,16 +30,31 @@ const Navbar = () => {
     <header>
       <div className="w-screen flex justify-between items-center">
         <div className="flex gap-[33.56px]">
-          <div className="">
+          <Link href="/" className="">
             <Image src="/images/Logo.png" alt="" height={76} width={154.56} />
-          </div>
+          </Link>
           <div className="md:flex gap-[19.34px] items-center hidden">
-            <SearchIcon />
+            <div className="" onClick={() => setSearchBtn(!searchBtn)}>
+              <SearchIcon />
+            </div>
             <input
               type="text"
               placeholder="Type to search a localisation......"
-              className="w-[214.724px] h-[18px] flex-shrink-0 focus:outline-none"
+              className="w-[214.724px] h-[18px] flex-shrink-0 focus:outline-none  hidden lg:block"
             />
+            <div
+              className={`${
+                searchBtn ? "absolute" : "hidden"
+              } top-[18px] left-[220px] bg-white z-20 w-[300px] h-[40px] flex gap-2 items-center ps-1 rounded-lg`}
+            >
+                <input
+                  type="text"
+                  defaultValue="hello "
+                  placeholder="Type to search a localisation......"
+                  className="w-[214.724px] h-[18px] flex-shrink-0 focus:outline-none"
+                />
+                <span onClick={() => setSearchBtn(false)}><CloseIcon /></span>
+            </div>
           </div>
         </div>
         <div className="block md:hidden">
@@ -65,12 +82,12 @@ const Navbar = () => {
               </svg>
             </div>
           </div>
-          <button className="bg-[#3C50E0] w-[168.269px] custom-center text-white rounded-[30px] flex gap-[8.33px] py-[5px]">
+          <Link href="/create-ad" className="bg-[#3C50E0] w-[168.269px] custom-center text-white rounded-[30px] flex gap-[8.33px] py-[5px]">
             <HomeIcon />
             <p className="text-[16px] font-semibold leading-[150%]">
               Create an Ad
             </p>
-          </button>
+          </Link>
           {user?.email ? (
             <div className="flex gap-[12px] items-center">
               <div className="w-[33.373px] h-[27.821px] rounded-full custom-center bg-[#E2E8F0]">

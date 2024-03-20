@@ -2,6 +2,7 @@ import AnalyticsIcon from "../icons/analytics";
 import HistoryIcon from "../icons/historyIcon";
 import ProductIcon from "../icons/productIcon";
 import PropertyIcon from "../icons/propertyIcon";
+import QuestionIcon from "../icons/questionIcon";
 import Roomicon from "../icons/roomicon";
 import SalesIcon from "../icons/salesIcon";
 import ScheduleIcon from "../icons/scheduleIcon";
@@ -114,4 +115,40 @@ export const flatData = [
     bedRoom: "2",
     price: "124600",
   },
+];
+
+
+export const RatingData = [
+  {
+    title: "Apartment Experience (22)",
+    icon: <QuestionIcon />,
+    rating: 5
+  },
+  {
+    title: "Location (22)",
+    icon: <QuestionIcon />,
+    rating: 3.2
+  },
+  {
+    title: "Cleanliness (21)",
+    icon: <QuestionIcon />,
+    rating: 4.6
+  },
+  {
+    title: "Condition, Comfort, Amenities (22)",
+    icon: <QuestionIcon />,
+    rating: 5
+  },
+  {
+    title: "Building (21)",
+    icon: <QuestionIcon />,
+    rating: 2.5
+  }
+]
+
+
+export const slidesImg: string[] = [
+  "/images/pexels-andrei-i-17867773.jpg",
+  "/images/pexels-ibrahgraphy-deer.jpg",
+  "/images/pexels-magda-ehlers-5958376.jpg",
 ];

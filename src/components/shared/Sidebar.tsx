@@ -9,7 +9,7 @@ const Sidebar = () => {
 
   return (
     <div
-      className={` ${menuOpen ? "absolute" : ""} max-w-[288px] h-[85vh] lg:h-[85vh] top-0 left-0 md:static z-20 flex flex-col justify-between items-start pt-[20px] custom-transition opacity-100 bg-white`}
+      className={`absolute lg:static max-w-[288px] h-[88vh] md:h-[90vh] top-0 left-[0px] z-20 flex flex-col justify-between items-start pt-[20px] custom-transition opacity-100 bg-white`}
     >
         <button
           onClick={() => setMenuClose(!menuOpen)}

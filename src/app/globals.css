@@ -7,12 +7,11 @@ body {
   overflow-x: hidden;
 }
 
-/* .container { */
-/* margin: 0 auto; */
-/* max-width: 1440px; */
-/* background: orange; */
-/* font-family: "Manrope", sans-serif; */
-/* } */
+.custom-container {
+  margin: 0 auto;
+  width: 1440px;
+  font-family: "Manrope", sans-serif;
+}
 
 .box-shadow {
   box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.04);
@@ -56,9 +55,14 @@ body {
   .custom-card-info {
     @apply font-medium text-[14px];
   }
+  .custom-grid-box {
+    @apply bg-[#D9D9D9] rounded-[5px];
+  }
 }
 
-
+.section-height {
+  height: calc(100vh - 80px);
+}
 
 .hover-scrollbar::-webkit-scrollbar {
   width: 0;
