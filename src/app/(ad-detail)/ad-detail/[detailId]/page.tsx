@@ -9,7 +9,7 @@ const AddDetail = ({ params }: { params: { id: string } }) => {
   ];
 
   return (
-    <div className="flex flex-col lg:flex-row w-screen">
+    <div className="flex flex-col xl:flex-row w-screen">
       {/* left side  */}
       <LeftSide />
       {/* right side  */}

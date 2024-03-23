@@ -6,7 +6,7 @@ const DynamicChartLine = dynamic(() => import("@/components/shared/Chart"), {
 
 const RightSide = () => {
     return (
-        <div className="flex-1 bg-red ps-[10px] pe-[20px]">
+        <div className="flex-1 bg-red ps-[10px] pe-[10px] xl:pe-[20px]">
         <div
           className={`w-full lg:flex-1 h-[300px] flex-shrink-0 custom-transition `}
         >

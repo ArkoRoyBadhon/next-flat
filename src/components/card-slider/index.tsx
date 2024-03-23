@@ -37,9 +37,9 @@ const SliderCard= ({index=1, item, slides}:{index?: string | number;
                 <div className="w-full md:w-[60%]">
                   <div className="w-full flex justify-between">
                     <div className="">
-                      <h4 className="text-[24px] font-semibold">
+                      <Link href="/select-ad" className="text-[24px] font-semibold">
                         {item?.title}
-                      </h4>
+                      </Link>
                     </div>
                     <div className="flex gap-[9.64px]">
                       <div className="w-[31.364px] h-[32.3px] custom-center bg-white rounded-full">
@@ -93,7 +93,7 @@ const SliderCard= ({index=1, item, slides}:{index?: string | number;
 
                     <Link
                       href="ad-detail/id"
-                      className="w-[93px] h-[40px] bg-white rounded-lg text-[14px] font-normal custom-center gap-[10px]"
+                      className="w-[93px] h-[40px] bg-white rounded-lg text-[14px] font-normal custom-center gap-[5px] md:gap-[10px]"
                     >
                       apply
                       <div className="transfrom -rotate-90">

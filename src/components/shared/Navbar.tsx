@@ -14,15 +14,15 @@ import CloseIcon from "@/utils/icons/closeIcon";
 import Link from "next/link";
 
 const Navbar = () => {
-  const [logInfo, setLogInfo] = useState(false);
+  // const [logInfo, setLogInfo] = useState(false);
   const [searchBtn, setSearchBtn] = useState(false);
-  let user;
+  // let user;
 
-  if (logInfo) {
-    user = { email: "test@gmail.com" };
-  } else {
-    user = null;
-  }
+  // if (logInfo) {
+  //   user = { email: "test@gmail.com" };
+  // } else {
+  //   user = null;
+  // }
 
   // const user = null
 
@@ -34,7 +34,13 @@ const Navbar = () => {
             <Image src="/images/Logo.png" alt="" height={76} width={154.56} />
           </Link>
           <div className="md:flex gap-[19.34px] items-center hidden">
-            <div className="" onClick={() => setSearchBtn(!searchBtn)}>
+            <div
+              className="block lg:hidden"
+              onClick={() => setSearchBtn(!searchBtn)}
+            >
+              <SearchIcon />
+            </div>
+            <div className="hidden lg:block">
               <SearchIcon />
             </div>
             <input
@@ -47,17 +53,19 @@ const Navbar = () => {
                 searchBtn ? "absolute" : "hidden"
               } top-[18px] left-[220px] bg-white z-20 w-[300px] h-[40px] flex gap-2 items-center ps-1 rounded-lg`}
             >
-                <input
-                  type="text"
-                  defaultValue="hello "
-                  placeholder="Type to search a localisation......"
-                  className="w-[214.724px] h-[18px] flex-shrink-0 focus:outline-none"
-                />
-                <span onClick={() => setSearchBtn(false)}><CloseIcon /></span>
+              <input
+                type="text"
+                defaultValue="hello "
+                placeholder="Type to search a localisation......"
+                className="w-[214.724px] h-[18px] flex-shrink-0 focus:outline-none"
+              />
+              <span onClick={() => setSearchBtn(false)}>
+                <CloseIcon />
+              </span>
             </div>
           </div>
         </div>
-        <div className="block md:hidden">
+        <div className="block md:hidden pe-[5px]">
           <MobileMenuIcon />
         </div>
         <div className="hidden md:flex gap-[17px] items-center">
@@ -82,13 +90,16 @@ const Navbar = () => {
               </svg>
             </div>
           </div>
-          <Link href="/create-ad" className="bg-[#3C50E0] w-[168.269px] custom-center text-white rounded-[30px] flex gap-[8.33px] py-[5px]">
+          <Link
+            href="/create-ad"
+            className="bg-[#3C50E0] w-[168.269px] custom-center text-white rounded-[30px] flex gap-[8.33px] py-[5px]"
+          >
             <HomeIcon />
             <p className="text-[16px] font-semibold leading-[150%]">
               Create an Ad
             </p>
           </Link>
-          {user?.email ? (
+          {/* {user?.email ? (
             <div className="flex gap-[12px] items-center">
               <div className="w-[33.373px] h-[27.821px] rounded-full custom-center bg-[#E2E8F0]">
                 <BellIcon />
@@ -114,16 +125,17 @@ const Navbar = () => {
                 </div>
               </div>
             </div>
-          ) : (
-            <button
-              onClick={() => setLogInfo(true)}
+          ) : ( */}
+            <Link
+            href="/login"
+              // onClick={() => setLogInfo(true)}
               className="bg-[#3C50E0] w-[168.269px] custom-center text-white rounded-[30px] flex gap-[8.33px] py-[5px]"
             >
               <p className="text-[16px] font-semibold leading-[150%]">
                 Log in / Sign up
               </p>
-            </button>
-          )}
+            </Link>
+          {/* )} */}
           <div className="bg-[#3C50E0]"></div>
         </div>
       </div>

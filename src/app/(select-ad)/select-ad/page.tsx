@@ -4,13 +4,13 @@ import RightSideSelect from "@/components/select-ad/RightSideSelect";
 
 const SelectAd = () => {
   return (
-    <div className="flex section-height flex-col xl:flex-row w-screen gap-[9px] ps-[10px] md:ps-[0px] pe-[10px]">
+    <div className="flex section-height flex-col xl:flex-row w-screen gap-[14px] ps-[10px] md:ps-[0px] pe-[10px]">
       {/* left side  */}
       <div className="flex-1">
         <LeftSideSelect />
       </div>
 
-      <div className="flex flex-col md:flex-row md:h-full">
+      <div className="flex flex-col gap-[10px] md:flex-row md:h-full px-[10px]">
         {/* middle side  */}
         <div className=" md:w-[460px] overflow-y-scroll flex-1">
           <MiddleSideSelect />

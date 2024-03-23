@@ -1,10 +1,11 @@
 import BasicInformation from "@/components/create-ad/BasicInformation";
 import Localization from "@/components/create-ad/Localization";
+import SaleToogle from "@/components/shared/SaleToggle";
 import React from "react";
 
 const CreateAddPage = () => {
   return (
-    <div className="custom-container">
+    <div className="custom-container px-[20px] lg:px-0">
       <h2 className="text-[32px] font-medium leading-normal  text-center">
         Create a new ads
       </h2>
@@ -12,7 +13,7 @@ const CreateAddPage = () => {
         Welcome to our form where you add as much information as need about your
         property
       </p>
-      <div className="flex gap-[58px] pt-[52px] items-center">
+      <div className="flex flex-col md:flex-row gap-[58px] pt-[52px] items-center">
         <div className="relative border py-1 px-1 w-[368px] h-[55px] flex justify-start">
           <label
             htmlFor=""

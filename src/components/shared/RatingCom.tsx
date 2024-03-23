@@ -4,8 +4,8 @@ import { RatingData } from "@/utils/mock";
 
 const RatingCom = () => {
   return (
-    <div className="pt-[26px] gap-[10px] w-full flex flex-col md:flex-row pb-[20px]">
-      <div className="md:w-[50%]">
+    <div className="mt-[16px] gap-[10px] w-full flex flex-col lg:flex-row py-[10px] bg-[#F5F4F2] px-[5px] rounded-md">
+      <div className="lg:w-[50%]">
         <div className="flex gap-1 items-center">
           <h5 className="text-[14px] font-semibold">
             Overall Apartment Rating (23)
@@ -31,7 +31,7 @@ const RatingCom = () => {
           The Number in parenthesis is the number of customers who have rated
         </p>
       </div>
-      <div className="md:w-[50%]">
+      <div className="lg:w-[50%]">
         {RatingData &&
           RatingData.map((item, i) => {
             return (

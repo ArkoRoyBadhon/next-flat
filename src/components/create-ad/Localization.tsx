@@ -4,11 +4,11 @@ import SearchIcon from "@/utils/icons/searchIcon";
 
 const Localization = () => {
   return (
-    <div className="pt-[50px]">
+    <div className="pt-[50px] ">
       <h4 className="text-[32px] font-medium leading-normal">Localization</h4>
-      <div className="flex gap-[53px] pt-[62px]">
+      <div className="flex flex-col lg:flex-row gap-[53px] pt-[62px]">
         <div className="flex-1 ">
-          <form action="" className="grid grid-cols-2 gap-[57px]">
+          <form action="" className="grid grid-cols-1 md:grid-cols-2 gap-[57px] ">
             <div className="border flex items-center h-[55px] rounded-[4px]">
               <div className="px-2">
                 <SearchIcon />{" "}
@@ -89,8 +89,8 @@ const Localization = () => {
             </div>
           </form>
 
-          <div className="flex justify-between pt-[50px]">
-            <div className="flex items-center gap-[12px] text-blue-400 w-[437px]">
+          <div className="flex flex-col md:flex-row justify-between pt-[50px]">
+            <div className="flex items-center gap-[12px] text-blue-400 w-[350px] md:w-[437px]">
               <p className="capitalize text-[16px] whitespace-nowrap text-ellipsis leading-normal line-clamp-1">
                 5.354708943431563,-3.9874719330168893
               </p>
@@ -106,7 +106,7 @@ const Localization = () => {
         </div>
         <div className="flex-1">
           <div
-            className={`md:w-[97%] lg:flex-1 lg:h-full overflow-hidden flex-shrink-0 custom-transition `}
+            className={`md:w-[97%] lg:flex-1 h-[400px] lg:h-full overflow-hidden flex-shrink-0 custom-transition `}
           >
             <iframe
               className="h-full w-full"

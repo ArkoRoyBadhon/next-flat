@@ -7,7 +7,7 @@ const FilterOptions = () => {
     return (
         <div className="flex h-[40px] w-full justify-end items-center gap-[16px]">
           <div className="flex items-center gap-[8px] w-[142px] text-[12px] lg:text-[16px] ">
-            <p className="">Sales</p>
+            <p className="hidden md:block">Sales</p>
             <ToogleOption />
             <p className="">Rents</p>
           </div>

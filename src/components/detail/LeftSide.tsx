@@ -16,7 +16,7 @@ const LeftSide = () => {
   ];
 
   return (
-    <div className="w-full lg:w-[700px] ps-[10px] lg:ps-[32px] pe-[10px] lg:pe-[20px] pt-[20px] h-full">
+    <div className="w-full xl:w-[700px] ps-[10px] lg:ps-[32px] pe-[10px] lg:pe-[20px] pt-[20px] h-full">
       <FlatHeader />
       <div className="pt-[16px] w-full h-[350px]">
         <Slider slides={slides} />

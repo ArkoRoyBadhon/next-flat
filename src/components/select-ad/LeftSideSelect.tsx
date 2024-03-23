@@ -1,7 +1,7 @@
 const LeftSideSelect = () => {
   return (
     <div
-      className={`md:w-[100%] lg:flex-1 h-[250px] lg:h-full  overflow-hidden flex-shrink-0 custom-transition `}
+      className={`md:w-[100%] lg:flex-1 h-[250px] xl:h-full  overflow-hidden flex-shrink-0 custom-transition `}
     >
       <iframe
         className="h-full w-full"

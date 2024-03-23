@@ -6,7 +6,7 @@ const MainLayout = ({ children }: { children: React.ReactNode }) => {
     <>
       <Navbar />
       <main>
-        <div className="section-height w-screen mx-auto flex flex-col">
+        <div className="custom-container section-height w-screen mx-auto flex flex-col">
           <div className="flex gap-1 w-full h-[88vh] md:h-[93vh] lg:h-full relative md:pl-0">
             <div
               className="w-[64px] lg:hidden"

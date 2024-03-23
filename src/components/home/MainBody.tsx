@@ -22,7 +22,7 @@ const MainBody = () => {
       </div>
       <div className="h-full w-[100%] lg:w-[571px]">
         <FilterOptions />
-        <div className="h-[40vh] md:h-[calc(100vh-33vh)] lg:h-[calc(100vh-118px)] flex flex-col gap-[10px] lg:gap-[8px] overflow-y-scroll overflow-x-hidden px-2 lg:px-0">
+        <div className="h-full md:h-[calc(100vh-33vh)] lg:h-[calc(100vh-118px)] flex flex-col gap-[10px] lg:gap-[8px] overflow-y-scroll overflow-x-hidden px-2 lg:px-0">
           {flatData &&
             flatData.map((item, index) => (
               <SliderCard index={index} item={item} slides={slidesImg} />
